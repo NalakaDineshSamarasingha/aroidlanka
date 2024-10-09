@@ -1,0 +1,37 @@
+.image{
+    width: 70px;
+}
+.main-nav-cont{
+    border-bottom: 1px solid rgb(216, 214, 214);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.active{
+    border-bottom: 1px solid black;
+}
+
+
+.nav-link {
+    position: relative;
+    text-decoration: none;
+    color: #2D2D2D;
+    padding-bottom: 1px;
+}
+
+
+.nav-link::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 1.5px;
+    bottom: 0;
+    left: 0;
+    background-color: #000000;
+    transition: width 0.3s ease;
+    opacity: 1;
+}
+
+.nav-link:hover::before, .nav-link.active::before {
+    width: 100%;
+}
+  
