@@ -11,7 +11,7 @@ showcasing the latest trends and high-quality items.
 **This project is currently under development.** 
 
 ## Collaborators
-- [Your Name](link_to_your_profile)
-- [Collaborator's Name](link_to_collaborator_profile)
+- [NalakaDineshSamarasingha](link_to_your_profile)
+- [None](link_to_collaborator_profile)
 
 We are working hard to provide a seamless shopping experience!
