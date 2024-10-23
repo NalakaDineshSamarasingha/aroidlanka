@@ -1,9 +1,103 @@
 import React from 'react'
+import Header from '../components/Header/Header'
+import NewSection from '../components/NewArr/NewSection'
+import ImageGallery from '../components/ImageGalery/ImageGallery';
+
+const images = [
+  {
+    src: '/upload/pp.webp',
+    platform: 'instagram',
+    link: 'https://www.instagram.com/post1',
+  },
+  {
+    src: '/upload/main_product.webp',
+    platform: 'twitter',
+    link: 'https://twitter.com/post2',
+  },
+  {
+    src: '/upload/pp.webp',
+    platform: 'facebook',
+    link: 'https://facebook.com/post3',
+  },
+  {
+    src: '/upload/main_product.webp',
+    platform: 'facebook',
+    link: 'https://facebook.com/post3',
+  },
+  {
+    src: '/upload/main_product.webp',
+    platform: 'facebook',
+    link: 'https://facebook.com/post3',
+  },
+  {
+    src: '/upload/pp.webp',
+    platform: 'facebook',
+    link: 'https://facebook.com/post3',
+  },
+  {
+    src: '/upload/main_product.webp',
+    platform: 'facebook',
+    link: 'https://facebook.com/post3',
+  },
+  {
+    src: '/upload/pp.webp',
+    platform: 'facebook',
+    link: 'https://facebook.com/post3',
+  },
+  {
+    src: '/upload/main_product.webp',
+    platform: 'facebook',
+    link: 'https://facebook.com/post3',
+  },
+  {
+    src: '/upload/pp.webp',
+    platform: 'facebook',
+    link: 'https://facebook.com/post3',
+  },
+  {
+    src: '/upload/pp.webp',
+    platform: 'facebook',
+    link: 'https://facebook.com/post3',
+  },
+  {
+    src: '/upload/main_product.webp',
+    platform: 'facebook',
+    link: 'https://facebook.com/post3',
+  },
+  {
+    src: '/upload/main_product.webp',
+    platform: 'facebook',
+    link: 'https://facebook.com/post3',
+  },
+  {
+    src: '/upload/main_product.webp',
+    platform: 'facebook',
+    link: 'https://facebook.com/post3',
+  },
+  {
+    src: '/upload/main_product.webp',
+    platform: 'facebook',
+    link: 'https://facebook.com/post3',
+  },
+  {
+    src: '/upload/main_product.webp',
+    platform: 'facebook',
+    link: 'https://facebook.com/post3',
+  },
+  {
+    src: '/upload/main_product.webp',
+    platform: 'facebook',
+    link: 'https://facebook.com/post3',
+  },
+];
+
 
 function Home() {
   return (
     <div>
-    Home
+      <Header/>
+      <NewSection/>
+      <ImageGallery images={images} />
     </div>
   )
 }
