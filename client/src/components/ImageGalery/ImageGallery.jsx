@@ -50,7 +50,7 @@ function ImageGallery({ images }) {
   }, [currentImages, images]);
 
   return (
-    <div className='gallery'>
+    <div className='gallery py-16 '>
         <p className='collection-title py-4'>Say Hello to our Customer</p>
         <div className="gallery-container">
         {currentImages.map((image, index) => (

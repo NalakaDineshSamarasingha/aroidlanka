@@ -2,6 +2,7 @@ import React from 'react'
 import Header from '../components/Header/Header'
 import NewSection from '../components/NewArr/NewSection'
 import ImageGallery from '../components/ImageGalery/ImageGallery';
+import Limited from '../components/Limited/Limited';
 
 const images = [
   {
@@ -97,6 +98,9 @@ function Home() {
     <div>
       <Header/>
       <NewSection/>
+      <hr/>
+      <Limited />
+      <hr/>
       <ImageGallery images={images} />
     </div>
   )
