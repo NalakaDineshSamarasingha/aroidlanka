@@ -44,3 +44,15 @@ ul{
     letter-spacing: 3px;
     font-size: 0.9rem;
 }
+@media (max-width: 500px){
+    .row{
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+    }
+    .footer-main{
+        padding: 0;
+        width: 90vw;
+        margin: auto;
+    }
+}

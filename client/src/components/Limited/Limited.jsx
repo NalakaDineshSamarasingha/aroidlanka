@@ -106,7 +106,7 @@ function Limited({ minCount = 1, maxCount = 10 }) {
           </div>
           <div className="offer-right">
             <p className="p-name">alocosia jacklyn veriegated</p>
-            <div className="price-list">
+            <div className="limited-price-list">
               <p className="dis-price">$1,000</p>
               <p className="price">$1,300</p>
             </div>

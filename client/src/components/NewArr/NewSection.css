@@ -1,39 +1,45 @@
-
-.new-main-container{
+.new-main-container {
     background: white;
-    .secound{
+    overflow: hidden;
+    .secound {
         width: 90%;
         margin: auto;
         display: flex;
         flex-direction: column;
         justify-content: center;
     }
+}
 
+.list {
+    width: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
 }
-.list{
-    display: flex;
-    justify-content: space-between; 
-}
-.collection-title{
+
+.collection-title {
     font-size: 1.4rem;
     letter-spacing: 3px;
     opacity: 0.8;
     text-transform: uppercase;
 }
-.sub{
+
+.sub {
     font-size: 0.8rem;
     letter-spacing: 3px;
     opacity: 0.7;
     padding-bottom: 0.5rem;
 }
 
-.btn-cont{
+.btn-cont {
     width: 100%;
     display: flex;
     padding: 5%;
     justify-content: center;
 }
-.all{
+
+.all {
     width: fit-content;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -45,11 +51,38 @@
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease;
     border-radius: 1px;
-
 }
-.all:hover{
+
+.all:hover {
     background-color: white;
     color: black;
     transform: scale(1);
     border-color: black;
+}
+
+@media (max-width: 500px) {
+    .new-main-container {
+        padding: 3rem 0;
+    }
+
+    /* Hand Slider on Mobile */
+    .list {
+        display: flex;
+        overflow-x: scroll; /* Enable horizontal scrolling */
+        gap: 10px;
+        padding: 0 10px;
+    }
+
+    .list::-webkit-scrollbar {
+        display: none; /* Hide scrollbar for better UI */
+    }
+
+    .list > div { /* Each product container */
+        min-width: 180px; /* Adjust the width for mobile products */
+        flex: 0 0 auto; /* Prevent items from shrinking */
+    }
+
+    .secound {
+        width: 100vw;
+    }
 }

@@ -3,6 +3,7 @@ import Header from '../components/Header/Header'
 import NewSection from '../components/NewArr/NewSection'
 import ImageGallery from '../components/ImageGalery/ImageGallery';
 import Limited from '../components/Limited/Limited';
+import HotCollection from '../components/HotCollection/HotCollection';
 
 const images = [
   {
@@ -100,6 +101,8 @@ function Home() {
       <NewSection/>
       <hr/>
       <Limited />
+      <hr/>
+      <HotCollection/>
       <hr/>
       <ImageGallery images={images} />
     </div>

@@ -87,8 +87,10 @@
     color: rgba(0, 0, 0, 0.7);
   }
   
-  .price-list {
+  .limited-price-list {
+    display: flex;
     justify-content: start;
+    gap: 2rem;
     font-size: 1.1rem;
   }
   
@@ -153,5 +155,31 @@
     }
     to {
       opacity: 1;
+    }
+  }
+
+  
+  @media (max-width: 500px) {
+    .product-place{
+      flex-direction: column;
+      gap: 0;
+    }
+    .offer-left {
+      max-width: 100%;
+    }
+    .slider-image-wrapper{
+      height: auto;
+    }
+    .offer-right{
+      text-align: center;
+    }
+    .limited-price-list{
+      justify-content: center;
+    }
+    .count{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
     }
   }

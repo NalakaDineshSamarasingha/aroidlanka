@@ -6,7 +6,7 @@
 }
 
 .card-image-container img {
-    width: 20vw;
+    width: 250px;
     height: auto;
     transition: transform 3s ease-in-out; 
 }
@@ -71,7 +71,7 @@
 }
 
 .product-card-cont {
-    width: 20vw;
+    width: 250px;
     cursor: pointer;
 }
 
