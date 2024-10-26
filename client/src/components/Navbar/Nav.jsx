@@ -13,9 +13,15 @@ import {
   faPlus,
 } from "@fortawesome/free-solid-svg-icons";
 
+
 function Nav() {
   const [isMegaMenuOpen, setIsMegaMenuOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isInputVisible, setInputVisible] = useState(false);
+
+  const toggleSearch = () => {
+    setInputVisible(!isInputVisible);
+  };
 
   return (
     <div>
@@ -86,7 +92,9 @@ function Nav() {
         </div>
 
         <div className="right text-xl flex gap-6 opacity-80">
-          <FontAwesomeIcon icon={faMagnifyingGlass} />
+           
+            <FontAwesomeIcon icon={faMagnifyingGlass} onClick={toggleSearch} />
+
           <FontAwesomeIcon icon={faCartShopping} className="icon" />
           <FontAwesomeIcon icon={faUser} />
         </div>
@@ -105,7 +113,7 @@ function Nav() {
 
           {/* Mobile Icons */}
           <div className="mobo-right text-xl flex gap-6 opacity-80">
-            <FontAwesomeIcon icon={faMagnifyingGlass} />
+            <FontAwesomeIcon icon={faMagnifyingGlass} onClick={toggleSearch} />
             <FontAwesomeIcon icon={faCartShopping} className="icon" />
             <FontAwesomeIcon
               icon={faBars}
@@ -148,6 +156,18 @@ function Nav() {
               <NavLink to="/contact" className="nav-link uppercase">Contact us</NavLink>
             </li>
           </ul>
+        </div>
+      </div>
+      <div className={isInputVisible ? 'bg-tr' : ' bg-tr hidden'}>
+
+        <div  className={isInputVisible ? 'search-bar input-field' : 'search-bar hidden'}>
+          <FontAwesomeIcon icon={faMagnifyingGlass} className={isInputVisible ? 'search-input magni' : 'search-input hidden'}/>
+          <input 
+            type="text" 
+            className={isInputVisible ? 'search-input input-field' : 'search-input hidden'}
+            placeholder="Search"
+          />
+          <FontAwesomeIcon icon={faXmark}  onClick={toggleSearch} className={isInputVisible ? 'search-input' : 'search-input hidden'}/>
         </div>
       </div>
     </div>

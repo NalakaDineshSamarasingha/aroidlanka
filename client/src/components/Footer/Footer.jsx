@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { SocialIcon } from 'react-social-icons'
 import './Footer.css'
 
 function Footer() {
@@ -34,7 +34,8 @@ function Footer() {
                     <p className='about'>Join us in our mission to make Sri Lanka a greener place, one plant at a time!</p>
                 </div>
                 <div className='social-links'>
-                    
+                    <SocialIcon url="https://facebook.com" bgColor='black' className='social-icon' />
+                    <SocialIcon url="https://instagram.com" bgColor='black' className='social-icon'/>
                 </div>
             </div>
             <div className='col'>

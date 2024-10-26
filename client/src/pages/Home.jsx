@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Header from '../components/Header/Header'
 import NewSection from '../components/NewArr/NewSection'
 import ImageGallery from '../components/ImageGalery/ImageGallery';
@@ -95,6 +95,8 @@ const images = [
 
 
 function Home() {
+
+
   return (
     <div>
       <Header/>
