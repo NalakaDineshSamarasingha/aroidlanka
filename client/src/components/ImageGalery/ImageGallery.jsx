@@ -29,13 +29,13 @@ function ImageGallery({ images }) {
     return shuffled.slice(0, 10);
   });
 
-  const [changingIndex, setChangingIndex] = useState(Math.floor(Math.random() * 10)); // Index of the image that will change
+ 
 
   useEffect(() => {
     const interval = setInterval(() => {
       // Randomly select one of the displayed images to change
       const newChangingIndex = Math.floor(Math.random() * 10); 
-      setChangingIndex(newChangingIndex); // Set the changing index
+     
 
       const newImage = getRandomImage(images, currentImages); // Get a new image not in the current display
       setCurrentImages((prevImages) => {

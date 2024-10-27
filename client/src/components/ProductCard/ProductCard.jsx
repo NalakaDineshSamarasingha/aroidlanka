@@ -16,7 +16,7 @@ function ProductCard({id,image, availability, price, disprice, description}) {
                     <button className="card-btn-on-image">+</button>
                 </div>
             </div>
-            <img src={image} alt='product Image' className=''/>     
+            <img src={image} alt='product' className=''/>     
         </div>
         <div className='card-desc ' onClick={handleClick}>
             {description}

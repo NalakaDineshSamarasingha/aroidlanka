@@ -15,8 +15,8 @@ function Header() {
             </div>
 
         </div>
-        <img src={Header_image} alt='Header Image' className='w-screen m-desk'/>   
-        <img src={Header_image2} alt='header Image' className='m-mobo'/> 
+        <img src={Header_image} alt='Header' className='w-screen m-desk'/>   
+        <img src={Header_image2} alt='header mobo' className='m-mobo'/> 
     </div>
   )
 }

@@ -28,7 +28,7 @@ function Nav() {
       {/* Main Navbar for larger screens */}
       <div className="flex justify-between items-center px-10 py-6 main-nav-cont">
         <div className="left flex items-center gap-10">
-          <a href="#">
+          <a href="/">
             <img className="image" src={logo} alt="Logo" />
           </a>
           <ul className="flex gap-10 opacity-90 text-sm tracking-widest ">
@@ -106,7 +106,7 @@ function Nav() {
       <div className="opac">
         <div className="flex justify-between items-center px-4 py-6 mobo-nav-cont">
           <div className="left flex items-center gap-10">
-            <a href="#">
+            <a href="/">
               <img className="image" src={logo} alt="Logo" />
             </a>
           </div>
@@ -126,7 +126,7 @@ function Nav() {
         {/* Full Menu on Mobile */}
         <div className={`mobile-menu ${isMobileMenuOpen ? "open" : ""}`}>
           <div className="mobo-logo">
-            <img src={logo} className="logo"/>
+            <img src={logo} className="logo" alt="logo"/>
             <FontAwesomeIcon icon={faXmark} onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}  size="2x" />
           </div>
           <ul className="flex flex-col gap-4 ">

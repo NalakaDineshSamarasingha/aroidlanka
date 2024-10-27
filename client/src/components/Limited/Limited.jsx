@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import "./Limited.css";
 
 function Limited({ minCount = 1, maxCount = 10 }) {
@@ -27,6 +27,16 @@ function Limited({ minCount = 1, maxCount = 10 }) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
 
+  const handleNextSlide = useCallback(() => {
+    setIsTransitioning(true); // Trigger transition animation
+    setTimeout(() => {
+      const isLastSlide = currentIndex === images.length - 1;
+      const newIndex = isLastSlide ? 0 : currentIndex + 1;
+      setCurrentIndex(newIndex);
+      setIsTransitioning(false); // Remove transition effect
+    }, 500); // Duration of the animation
+  }, [currentIndex, images.length]); // Memoize with useCallback to prevent re-creation on each render
+
   // Auto-scrolling feature
   useEffect(() => {
     const autoScroll = setInterval(() => {
@@ -34,7 +44,7 @@ function Limited({ minCount = 1, maxCount = 10 }) {
     }, 10000);
 
     return () => clearInterval(autoScroll);
-  }, [currentIndex, images.length]);
+  }, [handleNextSlide]); // Use handleNextSlide as a dependency
 
   const handlePrevSlide = () => {
     setIsTransitioning(true); // Trigger transition animation
@@ -46,26 +56,12 @@ function Limited({ minCount = 1, maxCount = 10 }) {
     }, 500); // Duration of the animation
   };
 
-  const handleNextSlide = () => {
-    setIsTransitioning(true); // Trigger transition animation
-    setTimeout(() => {
-      const isLastSlide = currentIndex === images.length - 1;
-      const newIndex = isLastSlide ? 0 : currentIndex + 1;
-      setCurrentIndex(newIndex);
-      setIsTransitioning(false); // Remove transition effect
-    }, 500); // Duration of the animation
-  };
-
   return (
     <div className="">
       <div className="new-main-container py-16">
         <div className="secound">
-          <p className="sub font-extralight text-center uppercase">
-            Limited time
-          </p>
-          <p className="collection-title font-extralight text-center pb-8">
-            Offer
-          </p>
+          <p className="sub font-extralight text-center uppercase">Limited time</p>
+          <p className="collection-title font-extralight text-center pb-8">Offer</p>
         </div>
         <div className="product-place">
           <div className="offer-left">

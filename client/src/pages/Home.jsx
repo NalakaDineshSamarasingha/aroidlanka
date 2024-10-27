@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Header from '../components/Header/Header'
 import NewSection from '../components/NewArr/NewSection'
 import ImageGallery from '../components/ImageGalery/ImageGallery';
